@@ -1,3 +1,6 @@
-body{
-    background-color: rgb(25, 15, 167);
-}
+// importamos las carpetas de los estilos para compilar 
+@forward 'base' ;
+@forward 'layout';
+
+
+
