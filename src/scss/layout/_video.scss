@@ -1,0 +1,9 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.video{
+    width: 1024px; ;
+    height: 480;
+    margin-top: 0;
+    padding: 0;
+}
