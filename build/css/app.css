@@ -539,6 +539,35 @@ body > section {
   background-color: #95d5d2;
 }
 
+.galeria {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.galeria-imagen {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+}
+@media (min-width: 480px) {
+  .galeria-imagen {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .galeria-imagen {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.galeria img {
+  height: 20rem;
+  object-fit: cover;
+}
+
 .contenedor-boletos {
   background-color: #4CB8B3;
 }
