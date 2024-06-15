@@ -326,6 +326,9 @@ body {
   color: #000000;
   font-size: 2rem;
 }
+body.overflow-hidden {
+  overflow: hidden;
+}
 
 p {
   color: #000000;
@@ -544,11 +547,6 @@ body > section {
   max-width: 120rem;
   margin: 0 auto;
 }
-.galeria-imagen {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5rem;
-}
 @media (min-width: 480px) {
   .galeria-imagen {
     display: grid;
@@ -563,11 +561,62 @@ body > section {
     gap: 5rem;
   }
 }
+@media (min-width: 1200px) {
+  .galeria-imagen {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+  }
+}
 .galeria img {
   height: 20rem;
   object-fit: cover;
 }
 
+.btn-cerrar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: none;
+  color: #000000;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  animation: fadeIn ease-in 0.05;
+}
+.modal.fade-out {
+  animation: fadeOut ease-in 0.05;
+}
+.modal img {
+  max-width: 100rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .contenedor-boletos {
   background-color: #4CB8B3;
 }
